@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/player2LengthScoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.77"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.20"
+        tools:text="34" />
+
+    <TextView
+        android:id="@+id/player1lengthScoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/player2LengthScoreText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.22"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="45" />
+
+    <TextView
+        android:id="@+id/player1Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Player 1"
+        app:layout_constraintBottom_toTopOf="@+id/player1lengthScoreText"
+        app:layout_constraintEnd_toEndOf="@+id/player1lengthScoreText"
+        app:layout_constraintStart_toStartOf="@+id/player1lengthScoreText" />
+
+    <TextView
+        android:id="@+id/player2Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player 2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/player1Name"
+        app:layout_constraintEnd_toEndOf="@+id/player2LengthScoreText"
+        app:layout_constraintStart_toStartOf="@+id/player2LengthScoreText" />
+
+    <TextView
+        android:id="@+id/player1NumberOfHitsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/player1lengthScoreText"
+        app:layout_constraintStart_toStartOf="@+id/player1lengthScoreText"
+        app:layout_constraintTop_toBottomOf="@+id/player1lengthScoreText"
+        tools:text="2" />
+
+    <TextView
+        android:id="@+id/player2NumberOfHitsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/player2LengthScoreText"
+        app:layout_constraintStart_toStartOf="@+id/player2LengthScoreText"
+        app:layout_constraintTop_toBottomOf="@+id/player2LengthScoreText"
+        tools:text="1" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="?android:attr/listDivider" />
+
+    <View
+        android:id="@+id/verticalDivider"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="@+id/player2HitsCountIncrementorBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/player1lengthIncrementorBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="+1 metr"
+        app:layout_constraintEnd_toStartOf="@+id/verticalDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player1NumberOfHitsText" />
+
+    <Button
+        android:id="@+id/player1HitsCountIncrementorBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="+1 hit"
+        app:layout_constraintEnd_toStartOf="@+id/verticalDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player1lengthIncrementorBtn" />
+
+    <Button
+        android:id="@+id/player2LengthIncrementorBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="+1 metr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/verticalDivider"
+        app:layout_constraintTop_toBottomOf="@+id/player2NumberOfHitsText" />
+
+    <Button
+        android:id="@+id/player2HitsCountIncrementorBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="+1 hit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/verticalDivider"
+        app:layout_constraintTop_toBottomOf="@+id/player2LengthIncrementorBtn" />
+
+    <Button
+        android:id="@+id/resetBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verticalDivider" />
+</androidx.constraintlayout.widget.ConstraintLayout>
